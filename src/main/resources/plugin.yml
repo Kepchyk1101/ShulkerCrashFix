@@ -1,0 +1,5 @@
+name: ShulkerCrashFix
+version: '${project.version}'
+main: com.kepchyk1101.shulkercrashfix.ShulkerCrashFix
+author: Kepchyk1101
+description: Fixes a server crash with a shulker

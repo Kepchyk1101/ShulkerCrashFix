@@ -1,0 +1,12 @@
+# ru: Оповещение в консоль о том, что кто-то пытался крашнуть/положить сервер с помощью шалкера, с указанием координат местопроисшествия.
+# en: Notification to the console that someone tried to crash the server using a shulker, indicating the coordinates of the incident.
+console-notify:
+  enable: true
+  message: "&cSomeone tried to crash server by throwing a shulker at: &6X: {X}, Y: {Y}, Z: {Z}"
+
+# ru: Оповещение всем онлайн-игрокам с определёнными правами или с активным статусом /OP о том, что кто-то пытался крашнуть/положить сервер с помощью шалкера, с указанием координат местопроисшествия.
+# en: Notification to all online players with certain rights or with an active /OP status that someone tried to crash the server using a shulker, indicating the coordinates of the location.
+ingame-notify:
+  enable: true
+  permission: ShulkerCrashFix.notify
+  message: "&7[&aShulkerCrashFix&7] &cSomeone tried to crash server by throwing a shulker at: &6X: {X}, Y: {Y}, Z: {Z}"
