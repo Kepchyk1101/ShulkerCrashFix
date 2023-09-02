@@ -1,7 +1,6 @@
 package com.kepchyk1101.shulkercrashfix;
 
-import com.kepchyk1101.shulkercrashfix.events.BlockDispenseListener;
-import org.bukkit.configuration.file.FileConfiguration;
+import com.kepchyk1101.shulkercrashfix.listeners.BlockDispenseListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
@@ -10,19 +9,18 @@ public final class ShulkerCrashFix extends JavaPlugin {
 
     private static ShulkerCrashFix instance;
     private final Logger log = getLogger();
-    public static FileConfiguration config;
 
     @Override
     public void onEnable() {
-        long startTime = System.currentTimeMillis();
 
         instance = this;
+
         saveDefaultConfig();
-        config = getConfig();
+
         getServer().getPluginManager().registerEvents(new BlockDispenseListener(), this);
 
-        double enabledTime = (double) (System.currentTimeMillis() - startTime) / 1000;
-        log.info("Plugin has been enabled! (in " + enabledTime + " sec.)");
+        log.info("ShulkerCrashFix has been enabled!");
+
     }
 
     @Override
@@ -32,10 +30,6 @@ public final class ShulkerCrashFix extends JavaPlugin {
 
     public static ShulkerCrashFix getInstance() {
         return instance;
-    }
-
-    public Logger getLog() {
-        return log;
     }
 
 }
